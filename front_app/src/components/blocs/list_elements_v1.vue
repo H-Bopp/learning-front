@@ -28,9 +28,10 @@ export default {
             }
         },
         makeMainList () {
-            // TODO definir la largeur min d'un element
-            var elemMinWidth = 200
-            var listMaxSize = this.getLarge() % elemMinWidth
+            // TODO definir la largeur min d'un element 
+        
+            var elemMinWidth = 200;
+            var listMaxSize = Math.trunc(this.getLarge()/elemMinWidth);
             for( var i = 0 ; i < listMaxSize ; i++){
                 if(this.holdingOnList.length != 0){
                     this.mainList.push(this.holdingOnList.pop())
